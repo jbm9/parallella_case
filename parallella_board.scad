@@ -4,8 +4,8 @@ module parallella_board() {
 
   base_thickness = 1.6;
 
-  hole_offset_w = 3; // offset of holes along width
-  hole_offset_h = 3; // and along height
+  hole_offset_w = 3.1; // offset of holes along width
+  hole_offset_h = 3.2; // and along height
 
   hole_dia = 3;
 
@@ -17,10 +17,10 @@ module parallella_board() {
     // expansion headers
     for (i = [0:1]) {
       for (j = [0:1]) {
-	translate([5 + j*(parallella_height-10-8),
-		   8 + i*(parallella_width-15-20),
+	translate([ j*(parallella_height-8),
+		   6 + i*(parallella_width-26-6-6),
 		   0])
-	  cube([8, 20,4]);
+	  cube([8, 26,4]);
 	  }
     }
 
@@ -38,7 +38,7 @@ module parallella_board() {
 
 	// ethernet jack
 	translate([hole_offset_w*2+4, -2, base_thickness])
-	  cube([15, 22, 17-base_thickness+4]);
+	  cube([15, 22, 13]);
 
 	// power jack
 	translate([parallella_height-hole_offset_h*2-8, -2, base_thickness]) 
@@ -60,8 +60,8 @@ module parallella_board() {
       union() {
 	for (i = [0:1]) {
 	  for (j = [0:1]) {
-	    translate([ hole_offset_h + j*(parallella_height-2*hole_offset_h),
-		        hole_offset_w + i*(parallella_width-2*hole_offset_w),
+	    translate([ hole_offset_h + j*48,
+		        hole_offset_w + i*80,
 			-0.1])
 	      cylinder(h=base_thickness+0.2, r=hole_dia/2);
 	  }
@@ -74,3 +74,4 @@ module parallella_board() {
   } 
 }
 
+parallella_board();
