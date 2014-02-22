@@ -3,7 +3,7 @@ use <exp_blob.scad>;
 
 
 module unit_top() {
-  wall_t = 2;
+  wall_t = 3;
   total_h = 55+7*2;
   total_w = 86;
 
@@ -11,8 +11,8 @@ module unit_top() {
 
   height = 40+wall_t-base_t;
 
-  bottom_max = 23-base_t;
-  bottom_min = 15-base_t;
+  bottom_max = 20-base_t;
+  bottom_min = 12-base_t;
 
   fan_side = 40;
   fan_hole_d = 3;
@@ -29,7 +29,7 @@ module unit_top() {
   standoff_vert=10+0.5;
 
   corner_od = 12;
-  corner_id = corner_od-wall_t;
+  corner_id = corner_od-2*wall_t;
 
 
   difference() {
@@ -110,7 +110,7 @@ module unit_top() {
 
 
     // power jack hole
-    translate([-5, 30, (height+bottom_max)/2]) rotate([0, 90, 0]) cylinder(r=8/2, h=10);
+    //     translate([-5, 30, (height+bottom_max)/2]) rotate([0, 90, 0]) cylinder(r=8/2, h=10);
 
 
     // binding screws

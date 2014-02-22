@@ -5,8 +5,8 @@ module unit_base() {
 
   base_t = 7;
 
-  bottom_max = 23-base_t;
-  bottom_min = 15-base_t;
+  bottom_max = 20-base_t;
+  bottom_min = 12-base_t;
 
   fan_side = 40;
   fan_hole_d = 3;
