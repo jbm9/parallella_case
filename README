@@ -1,9 +1,15 @@
-.skel
-=====
+Parallella Case
+===============
 
-This is a skeleton project.  It needs better documentation.
+The Parallella board from Adapteva is pretty amazing, but it tends
+to run rather hot.  This is a case that lets you put a fan over the
+Zync SoC.  In the case, mine runs at ~110 degF (45ish Real Degrees).
 
-Contents:
+The design isn't perfect, but it's nicely decorative, at least for me.
 
-web/ -- An empty website for this thing
-code/ -- An empty directory for code for this thing
+The moire.scad file is interesting/amusing, and can be used to make
+decorative grills easily.
+
+Released under CC0 (https://creativecommons.org/publicdomain/zero/1.0/)
+Josh Myer <josh@joshisanerd.com>
+2014-02-22
